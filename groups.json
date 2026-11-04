@@ -1,0 +1,14 @@
+{
+  "_note": "The Agent library's groups, in the order its chips show them. Each agent file sits in the folder named by its group's id and says the same id in its frontmatter.",
+  "groups": [
+    { "id": "engineering", "label": "Engineering" },
+    { "id": "design", "label": "Design" },
+    { "id": "media", "label": "Images, video and 3D" },
+    { "id": "games", "label": "Games and the voxel world" },
+    { "id": "marketing", "label": "Marketing and social" },
+    { "id": "sales", "label": "Sales and support" },
+    { "id": "product", "label": "Product and projects" },
+    { "id": "research", "label": "Research and analysis" },
+    { "id": "business", "label": "Business and finance" }
+  ]
+}
