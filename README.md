@@ -4,7 +4,7 @@ The ready-made agents in the Agent library: one Markdown file each, in one folde
 groups in the order the Library shows them). Hiring one copies its text into a new agent, which the user can then
 change; this folder is never changed by the app.
 
-These replace The Agency (`library/agency-agents/`). The list of roles started from
+These replaced The Agency, the 283 agents that came with the dashboard before. The list of roles started from
 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) at commit
 `b37b5bb33b78f2c1d6567d98e25ca818e3259219` (MIT, see `LICENSE-agency-agents`); the text here is new.
 [Where the old agents went](#where-the-old-agents-went) records which old files each agent took over.
@@ -32,9 +32,9 @@ skills: github, witness-discipline, independent-review
 | Key | What it's for |
 |---|---|
 | `name`, `emoji` | The card and the hired agent. Familiar job titles |
-| `description` | One sentence of about 30 words: what it does and when you'd pick it. The card shows it, and the Brain reads every one when it picks teammates |
+| `description` | One sentence of about 30 words: what it does and when you'd pick it. The card and the preview show it |
 | `color` | Hex in quotes, mid-tone, readable on white and on near-black |
-| `specialty` | A lower-case phrase with no full stop. It finishes "You are Code Reviewer, …", the line the dashboard puts first in every agent's instructions |
+| `specialty` | A lower-case phrase with no full stop. It finishes "You are Code Reviewer, …", the line the dashboard puts first in every agent's instructions, and it's what the Brain reads when it picks teammates |
 | `group` | An id from `groups.json`, the same as the folder the file is in |
 | `tools` | The tool groups it starts with (`TOOL_GROUPS` in `server/tools.ts`). Every agent has `shell` and `agents`, so any agent can run a command (the user approves each one unless autonomy is Full) and ask a teammate. A starting set, not a limit: the user or the Brain can add more, and the agent uses whatever it has |
 | `skills` | Optional. Skill slugs it starts with, from the bundled skills (`skills/`) or the dashboard's own |
