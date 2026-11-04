@@ -19,32 +19,33 @@ One `key: value` per line (the dashboard's reader doesn't take YAML lists), so l
 ```markdown
 ---
 name: Code Reviewer
-description: Reviews a change for bugs, security holes and code that will be hard to keep, and says what to fix first.
+description: Reviews a change, AI-written or not, for bugs, security holes and code that will be hard to keep, says what to fix first and can fix it.
 emoji: 👁️
 color: "#6b7bff"
 specialty: reviews code changes and says what to fix first
 group: engineering
-tools: files, programs, agents
-skills: requesting-code-review, independent-review
+tools: files, shell, browser, agents
+skills: github, witness-discipline, independent-review
 ---
 ```
 
 | Key | What it's for |
 |---|---|
 | `name`, `emoji` | The card and the hired agent. Familiar job titles |
-| `description` | One sentence: what it does and when you'd pick it. The card shows it, and the Brain reads it when it picks a teammate |
+| `description` | One sentence of about 30 words: what it does and when you'd pick it. The card shows it, and the Brain reads every one when it picks teammates |
 | `color` | Hex in quotes, mid-tone, readable on white and on near-black |
 | `specialty` | A lower-case phrase with no full stop. It finishes "You are Code Reviewer, …", the line the dashboard puts first in every agent's instructions |
 | `group` | An id from `groups.json`, the same as the folder the file is in |
-| `tools` | The tool groups it starts with (`TOOL_GROUPS` in `server/tools.ts`). A starting set, not a limit: the user or the Brain can add more, and the agent uses whatever it has |
+| `tools` | The tool groups it starts with (`TOOL_GROUPS` in `server/tools.ts`). Every agent has `shell` and `agents`, so any agent can run a command (the user approves each one unless autonomy is Full) and ask a teammate. A starting set, not a limit: the user or the Brain can add more, and the agent uses whatever it has |
 | `skills` | Optional. Skill slugs it starts with, from the bundled skills (`skills/`) or the dashboard's own |
 | `engine` | Optional. Only when the agent needs one engine (the Mail Assistant uses `claude-code` for the Gmail connector) |
 | `starter` | `true` on the 8 agents the Home page's "add the starter team" hires |
 
 ## Body
 
-60 to 150 lines; most land around 100. Plain headings in sentence case, no emoji. The headings are a guide, not a
-form: a section with nothing specific to say is left out.
+60 to 150 lines, wrapped at 120 characters (tables and code blocks aside); most land between 100 and 145. Plain
+headings in sentence case, no emoji. The headings are a guide, not a form: a section with nothing specific to say is
+left out, and no section repeats another.
 
 - **Opening paragraph (no heading).** What the agent is for, who it works for, and what good work looks like in this
   field. No "You are …": the dashboard says that.
@@ -56,11 +57,13 @@ form: a section with nothing specific to say is left out.
 - **Lines you hold.** What it never does, and when it stops and asks: before deleting, spending money, sending or
   posting, or making a claim it can't back up. Legal, medical, tax and investment agents give information, not
   advice, and say when to see a professional. These lines protect the user; they are not limits on the role.
-- **Watch out for.** The usual ways this work goes wrong.
+- **Watch out for.** The usual ways this work goes wrong that the sections above don't already cover. If "How you
+  think" says it, don't say it again here.
 - **Beyond your role.** The nearby work it takes on itself (a Code Reviewer fixes what it finds and adds the test; a
   LinkedIn Writer makes the X version and the image to go with it). When a different kind of specialist ("a
   security reviewer") would clearly do better, or a second opinion is worth having, it says so or asks a teammate,
-  but it doesn't refuse reasonable work because it's outside its title.
+  but it doesn't refuse reasonable work because it's outside its title. Write hand-offs as "also get a security
+  review", not "security is not your job".
 
 ## Roles are a starting point
 
@@ -76,13 +79,17 @@ Models and their tools keep getting better, so the files are written to age well
   agent can do comes from its tools at run time, and that changes.
 - **Judgment over steps.** Describe what good work looks like and the trade-offs in it, not routines a strong model
   follows anyway. Write steps down only where the order matters (check before publishing, back up before a migration).
+- **Able to do more, not adding work nobody asked for.** It does what was asked first, at the size the task needs, and
+  offers the nearby extras in a line. It produces them unasked only when the asked-for thing can't work without them.
+  (In side-by-side tests, the rewritten agents' only losses came from building more than was asked.)
 - **The user's word comes first.** If the user asks an agent to stay in its lane, or a team gives it one part of a
   job, it keeps to that.
 
 ## Rules for every file
 
 1. **No invented numbers.** A number appears only when it is a real standard or threshold, it is correct, and it is
-   current (WCAG's 4.5:1 contrast for body text, a platform's real character limit).
+   current (WCAG's 4.5:1 contrast for body text, a platform's real character limit). Worked examples may use
+   made-up details (a file name, a line number) but never made-up statistics or results; use `[placeholders]`.
 2. **No claims of memory or experience.** Nothing like "you remember" or "you've shipped dozens of apps". The
    dashboard gives agents their memory itself.
 3. **No tool names that might not exist.** The dashboard tells each agent its tools at run time, and the same text
@@ -90,12 +97,16 @@ Models and their tools keep getting better, so the files are written to age well
    Real programs from the field are fine (`git`, `ffmpeg`, Blender's `bpy`).
 4. **Code only when words won't do**: short, correct, in today's idioms, and typed properly.
 5. **Facts that change get checked.** Versions, APIs, platform rules and limits are checked against current docs
-   when written. Anything that can't be confirmed is left out.
+   when written. A platform's limits come from its own help pages or docs; several other sites agreeing isn't enough.
+   Anything that can't be confirmed is left out.
 6. **Written for this role.** If you swap the name for another agent's, the text should stop making sense. This is
    about the writing being specific, not about narrowing what the agent may do.
 7. **Says what it assumed.** When a task is unclear, it asks one or two real questions, or states its assumption and
    goes on.
 8. **Fresh text.** The old Agency files are a list of topics at most. Nothing is copied from them.
+9. **Commands that work unattended.** A command the agent is told to run must work when its output is read by a
+   program and nothing can be typed in: no pagers, prompts or colour-only output (`git diff --color=always
+   --color-moved`, not `--color-moved` alone).
 
 ## Where the old agents went
 
