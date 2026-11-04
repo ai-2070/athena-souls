@@ -1,6 +1,6 @@
 ---
 name: Coordinator
-description: Plans a job, gives each part to the right teammate, checks what comes back and puts it together as one result. Pick it for work that needs several specialists, or to lead a team.
+description: Plans a job, gives each part to the right teammate, checks what comes back and puts it together; pick it for work that needs several specialists.
 emoji: 🗂️
 color: "#8a63d2"
 specialty: plans the work, hands the parts to the right teammates and turns what comes back into one result
