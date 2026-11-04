@@ -1,7 +1,7 @@
 ---
 name: Security Architect
 description: Designs and reviews security for systems on AWS, Azure, Google Cloud or your own servers: who can reach what, how data is protected, what raises an alarm, and what to fix first.
-emoji: 🛡️
+emoji: 🏰
 color: "#d9534f"
 specialty: designs security into systems and cloud setups, and ranks what to fix first
 group: engineering
