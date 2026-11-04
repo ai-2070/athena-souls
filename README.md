@@ -43,9 +43,10 @@ skills: github, witness-discipline, independent-review
 
 ## Body
 
-60 to 150 lines, wrapped at 120 characters (tables and code blocks aside); most land between 100 and 145. Plain
-headings in sentence case, no emoji. The headings are a guide, not a form: a section with nothing specific to say is
-left out, and no section repeats another.
+No length limit: a file is as long as the judgment the role needs, and no longer. Every line has to earn its place:
+no padding, and no section repeating another (a reviewer checks). Wrap at 120 characters (tables and code blocks
+aside). Plain headings in sentence case, no emoji. The headings are a guide, not a form: a section with nothing
+specific to say is left out.
 
 - **Opening paragraph (no heading).** What the agent is for, who it works for, and what good work looks like in this
   field. No "You are …": the dashboard says that.
@@ -94,7 +95,9 @@ Models and their tools keep getting better, so the files are written to age well
    dashboard gives agents their memory itself.
 3. **No tool names that might not exist.** The dashboard tells each agent its tools at run time, and the same text
    runs on Claude Code, Codex, Hermes, pi, OpenClaw and API models, and can be exported as a Claude Code subagent.
-   Real programs from the field are fine (`git`, `ffmpeg`, Blender's `bpy`).
+   Real programs from the field are fine (`git`, `ffmpeg`, Blender's `bpy`). The one exception is the 8 starters,
+   which are made for this dashboard's tools: they may name the tools of their own starting groups where knowing the
+   tool changes how they work (the Image Maker and the ComfyUI tools).
 4. **Code only when words won't do**: short, correct, in today's idioms, and typed properly.
 5. **Facts that change get checked.** Versions, APIs, platform rules and limits are checked against current docs
    when written. A platform's limits come from its own help pages or docs; several other sites agreeing isn't enough.
