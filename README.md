@@ -113,8 +113,8 @@ Models and their tools keep getting better, so the files are written to age well
 
 ## Where the old agents went
 
-The Agency had 283 agents. 136 of them were folded into these 88 (★ marks the 8 that were Athena's starters, written
-in code before). The other 147 were left out and can be added back.
+The Agency had 283 agents. 134 of them were folded into these 88 (★ marks the 8 that were Athena's starters, written
+in code before). The other 149 were left out and can be added back.
 
 ### Engineering
 
@@ -177,7 +177,7 @@ in code before). The other 147 were left out and can be added back.
 | Unity Developer (`unity-developer`) | `unity-architect`, `unity-editor-tool-developer`, `unity-multiplayer-engineer`, `unity-shader-graph-artist` |
 | Unreal Developer (`unreal-developer`) | `unreal-systems-engineer`, `unreal-multiplayer-architect`, `unreal-technical-artist`, `unreal-world-builder` |
 | Godot Developer (`godot-developer`) | `godot-gameplay-scripter`, `godot-multiplayer-engineer`, `godot-shader-developer` |
-| Roblox Developer (`roblox-developer`) | `roblox-systems-scripter`, `roblox-experience-designer`, `roblox-avatar-creator` |
+| Three.js Developer (`three-js-developer`) | `xr-immersive-developer` |
 
 ### Marketing and social
 
@@ -249,13 +249,14 @@ in code before). The other 147 were left out and can be added back.
 | Investment Researcher (`investment-researcher`) | `finance-investment-researcher` |
 | Pricing Analyst (`pricing-analyst`) | `specialized-pricing-analyst` |
 
-### Left out (147)
+### Left out (149)
 
 - **academic**: `academic-anthropologist`, `academic-geographer`, `academic-historian`, `academic-narratologist`, `academic-psychologist`
 - **design**: `design-whimsy-injector`
 - **engineering**: `engineering-ai-data-remediation-engineer`, `engineering-ats-validator-architect`, `engineering-autonomous-optimization-architect`, `engineering-china-network-engineer`, `engineering-cms-developer`, `engineering-desktop-app-engineer`, `engineering-developer-tooling-engineer`, `engineering-drupal-performance`, `engineering-drupal-shopping-cart`, `engineering-electrical-engineer`, `engineering-email-intelligence-engineer`, `engineering-embedded-firmware-engineer`, `engineering-feishu-integration-developer`, `engineering-filament-optimization-specialist`, `engineering-finops-engineer`, `engineering-gaussdb-expert`, `engineering-i18n-engineer`, `engineering-identity-access-engineer`, `engineering-iot-fleet-engineer`, `engineering-it-service-manager`, `engineering-knowledge-graph-engineer`, `engineering-llm-post-training-engineer`, `engineering-multi-agent-systems-architect`, `engineering-network-engineer`, `engineering-orgscript-engineer`, `engineering-payments-billing-engineer`, `engineering-pdf-engine-architect`, `engineering-privacy-engineer`, `engineering-realtime-collaboration-engineer`, `engineering-rust-refactoring-specialist`, `engineering-search-relevance-engineer`, `engineering-servicenow-developer-mentor`, `engineering-solidity-smart-contract-engineer`, `engineering-universal-document-compiler`, `engineering-uswds-developer`, `engineering-video-streaming-engineer`, `engineering-voice-ai-integration-engineer`, `engineering-webassembly-engineer`, `engineering-wechat-mini-program-developer`, `engineering-wordpress-performance`, `engineering-wordpress-shopping-cart`
 - **finance**: `finance-tax-strategist`
-- **game-development**: `game-audio-engineer`, `level-designer`
+- **game-development**: `game-audio-engineer`, `level-designer`, `roblox-avatar-creator`, `roblox-experience-designer`,
+  `roblox-systems-scripter`
 - **gis**: `gis-3d-scene-developer`, `gis-analyst`, `gis-bim-specialist`, `gis-cartography-designer`, `gis-drone-reality-mapping`, `gis-geoai-ml-engineer`, `gis-geoprocessing-specialist`, `gis-qa-engineer`, `gis-solution-engineer`, `gis-spatial-data-engineer`, `gis-spatial-data-scientist`, `gis-technical-consultant`, `gis-web-gis-developer`
 - **healthcare**: `healthcare-clinical-evidence-agent`, `healthcare-innovation-strategist`, `healthcare-sovereign-health-systems-agent`
 - **marketing**: `marketing-app-store-optimizer`, `marketing-baidu-seo-specialist`, `marketing-bilibili-content-strategist`, `marketing-china-ecommerce-operator`, `marketing-china-market-localization-strategist`, `marketing-cross-border-ecommerce`, `marketing-developer-community-builder`, `marketing-douyin-strategist`, `marketing-global-podcast-strategist`, `marketing-kuaishou-strategist`, `marketing-livestream-commerce-coach`, `marketing-multi-platform-publisher`, `marketing-podcast-strategist`, `marketing-private-domain-operator`, `marketing-wechat-official-account`, `marketing-weibo-strategist`, `marketing-xiaohongshu-specialist`, `marketing-zhihu-strategist`
@@ -264,5 +265,5 @@ in code before). The other 147 were left out and can be added back.
 - **project-management**: `project-management-experiment-tracker`, `project-management-jira-workflow-steward`, `project-management-studio-operations`
 - **sales**: `sales-account-strategist`, `sales-coach`, `sales-engineer`, `sales-pipeline-analyst`
 - **security**: `security-blockchain-security-auditor`, `security-compliance-auditor`, `security-incident-responder`, `security-threat-detection-engineer`, `security-threat-intelligence-analyst`
-- **spatial-computing**: `macos-spatial-metal-engineer`, `terminal-integration-specialist`, `visionos-spatial-engineer`, `xr-cockpit-interaction-specialist`, `xr-immersive-developer`, `xr-interface-architect`
+- **spatial-computing**: `macos-spatial-metal-engineer`, `terminal-integration-specialist`, `visionos-spatial-engineer`, `xr-cockpit-interaction-specialist`, `xr-interface-architect`
 - **specialized**: `accounts-payable-agent`, `agentic-identity-trust`, `automation-governance-architect`, `change-management-consultant`, `chief-financial-officer`, `corporate-training-designer`, `data-consolidation-agent`, `data-privacy-officer`, `esg-sustainability-officer`, `government-digital-presales-consultant`, `healthcare-aging-parent-care-companion`, `healthcare-customer-service`, `healthcare-marketing-compliance`, `hospitality-guest-services`, `hr-onboarding`, `identity-graph-operator`, `legal-billing-time-tracking`, `legal-client-intake`, `loan-officer-assistant`, `lsp-index-engineer`, `ma-integration-manager`, `medical-billing-coding-specialist`, `organizational-psychologist`, `personal-growth-mentor`, `real-estate-buyer-seller`, `recruitment-specialist`, `report-distribution-agent`, `retail-customer-returns`, `sales-data-extraction-agent`, `specialized-civil-engineer`, `specialized-cultural-intelligence-strategist`, `specialized-developer-advocate`, `specialized-fedramp-rmf-compliance`, `specialized-focus-music-architect`, `specialized-french-consulting-market`, `specialized-korean-business-navigator`, `specialized-model-qa`, `specialized-salesforce-architect`, `specialized-strategy-duel-agent`, `specialized-workflow-architect`, `study-abroad-advisor`, `supply-chain-strategist`
