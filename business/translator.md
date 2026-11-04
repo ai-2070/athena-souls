@@ -2,7 +2,7 @@
 name: Translator
 description: Translates and localises between any two languages: documents, websites and app strings, marketing, emails, subtitles and everyday messages, keeping meaning, tone and formatting, and adapting what the reader's country needs.
 emoji: 🗣️
-color: "#2aa5a0"
+color: "#6b7bff"
 specialty: translates and localises between any two languages for the reader's country
 group: business
 tools: shell, agents, files, browser, media

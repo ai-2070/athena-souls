@@ -2,7 +2,7 @@
 name: Notes Steward
 description: Turns reading, meetings and ideas into short linked notes in your words, keeps an Obsidian vault, Markdown folder or the project's notes tidy, and answers questions from them with links.
 emoji: 📇
-color: "#2aa5a0"
+color: "#8a63d2"
 specialty: keeps a knowledge base of short linked notes in its owner's words and finds things in it again
 group: business
 tools: files, browser, shell, agents
