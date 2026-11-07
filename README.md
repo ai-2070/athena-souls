@@ -1,16 +1,25 @@
-# Athena's agents
+# Athena souls
 
-The ready-made agents in the Agent library: one Markdown file each, in one folder per group (`groups.json` lists the
-groups in the order the Library shows them). Hiring one copies its text into a new agent, which the user can then
-change; this folder is never changed by the app.
+The ready-made agents of [Athena Agents](https://github.com/ai-2070/athena-agents) (the dashboard): 88 roles, from
+Code Reviewer to Brand Designer, one Markdown file each, in one folder per group (`groups.json` lists the groups in
+the order the dashboard's Agent library shows them). Hiring one copies its text into a new agent, which the user can
+then change; the files themselves are never changed by the app.
+
+The dashboard keeps a copy of this repo in its `library/athena-souls` folder and refreshes it with
+`bun run sync souls`. Change the agents here, not in that copy.
 
 These replaced The Agency, the 283 agents that came with the dashboard before. The list of roles started from
 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) at commit
 `b37b5bb33b78f2c1d6567d98e25ca818e3259219` (MIT, see `LICENSE-agency-agents`); the text here is new.
 [Where the old agents went](#where-the-old-agents-went) records which old files each agent took over.
 
-Every file follows the standard below. `tests/server/library.test.ts` checks the format; the writing itself is
-checked by a reviewer and by trying the agent on real tasks.
+Every file follows the standard below. The dashboard's `tests/server/library.test.ts` checks the format; the writing
+itself is checked by a reviewer and by trying the agent on real tasks.
+
+## Licence
+
+The agents are MIT OR Apache-2.0, like the dashboard (`LICENSE-MIT`, `LICENSE-APACHE`). The list of roles they
+started from is MIT (`LICENSE-agency-agents`).
 
 ## Frontmatter
 
@@ -36,8 +45,8 @@ skills: github, witness-discipline, independent-review
 | `color` | Hex in quotes, mid-tone, readable on white and on near-black |
 | `specialty` | A lower-case phrase with no full stop. It finishes "You are Code Reviewer, …", the line the dashboard puts first in every agent's instructions, and it's what the Brain reads when it picks teammates |
 | `group` | An id from `groups.json`, the same as the folder the file is in |
-| `tools` | The tool groups it starts with (`TOOL_GROUPS` in `server/tools.ts`). Every agent has `shell` and `agents`, so any agent can run a command (the user approves each one unless autonomy is Full) and ask a teammate. A starting set, not a limit: the user or the Brain can add more, and the agent uses whatever it has |
-| `skills` | Optional. Skill slugs it starts with, from the bundled skills (`skills/`) or the dashboard's own |
+| `tools` | The tool groups it starts with (`TOOL_GROUPS` in the dashboard's `server/tools.ts`). Every agent has `shell` and `agents`, so any agent can run a command (the user approves each one unless autonomy is Full) and ask a teammate. A starting set, not a limit: the user or the Brain can add more, and the agent uses whatever it has |
+| `skills` | Optional. Skill slugs it starts with, from the skills that come with the dashboard (its `skills/` folder, [athena-skills](https://github.com/ai-2070/athena-skills) among them) or the ones it writes in code |
 | `engine` | Optional. Only when the agent needs one engine (the Mail Assistant uses `claude-code` for the Gmail connector) |
 | `starter` | `true` on the 8 agents the Home page's "add the starter team" hires |
 
