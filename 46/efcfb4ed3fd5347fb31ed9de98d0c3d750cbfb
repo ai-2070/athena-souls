@@ -1,0 +1,23 @@
+LICENSE-APACHE
+  s_817535cca0863c::t_7f13de6164b15f 1-177
+LICENSE-MIT
+  s_817535cca0863c::t_026237b7f696b1 1-21
+README.md
+  s_817535cca0863c::t_66b89abff4d430 1,3-9,16-22,48-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "46efcfb4ed3fd5347fb31ed9de98d0c3d750cbfb",
+  "prompts": {},
+  "sessions": {
+    "s_817535cca0863c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "15b5e9b2-d931-4572-b04a-53e45f3810d3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "LZL0 <12474488+LZL0@users.noreply.github.com>"
+    }
+  }
+}
